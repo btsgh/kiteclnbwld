@@ -20,6 +20,7 @@ export function ProductGrid() {
             <span className={`${bodyFont.className} text-[#1A1A1A] font-medium`}>{p.price}</span>
           </div>
           <p className={`${bodyFont.className} text-sm text-[#1A1A1A]/60 uppercase tracking-widest font-medium`}>{p.category}</p>
+          <p className={`${bodyFont.className} text-sm text-[#1A1A1A]/70 leading-relaxed mt-2`}>{p.description}</p>
         </div>
       ))}
     </div>

@@ -28,16 +28,16 @@ export const categories = [
   { name: 'Athletic Performance', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-athlete.png' },
   { name: 'Injury Recovery', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-recovery.png' },
   { name: 'Postpartum Care', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-postpartum.png' },
-  { name: 'Gut Health & Digestion', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter2/iter2-customer-health.png' },
-  { name: 'Weight Management', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter2/iter2-customer-athlete.png' },
+  { name: 'Gut Health & Digestion', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/gut-health-food-r1.png' },
+  { name: 'Weight Management', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/weight-management-food-r2.png' },
   { name: 'Mindful Eating', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter2/iter2-delivery-lifestyle.png' }
 ];
 
 export const products = [
-  { id: 1, title: 'The Rooted Bowl', price: '$14', category: 'Everyday Wellness', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-1.png' },
-  { id: 2, title: 'Protein Power', price: '$16', category: 'Athletic Performance', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-2.png' },
-  { id: 3, title: 'Healing Porridge', price: '$12', category: 'Postpartum Care', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-3.png' },
-  { id: 4, title: 'Green Detox', price: '$15', category: 'Injury Recovery', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-4.png' }
+  { id: 1, title: 'The Rooted Bowl', price: '$14', category: 'Everyday Wellness', description: 'Wholesome grains, seasonal roasted vegetables, fresh greens, and legumes — finished with a light house dressing.', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-1.png' },
+  { id: 2, title: 'Protein Power', price: '$16', category: 'Athletic Performance', description: 'Hearty grains, paneer or tofu, lentils or chickpeas, seasonal vegetables, and seeds — with a savory high-protein dressing.', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-2.png' },
+  { id: 3, title: 'Healing Porridge', price: '$12', category: 'Postpartum Care', description: 'Warm grains, soft cooked fruit or vegetables, nuts or seeds, and soothing spices — crafted for gentle postpartum nourishment.', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-3.png' },
+  { id: 4, title: 'Green Detox', price: '$15', category: 'Injury Recovery', description: 'Leafy greens, crunchy vegetables, fresh herbs, and sprouts — brought together with a bright, zesty dressing.', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-4.png' }
 ];
 
 export const valueProps = [
