@@ -1,0 +1,99 @@
+{
+  "url": "http://localhost:4401",
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "scanned_at": "2026-06-18T05:44:24.139706+00:00",
+  "elapsed_seconds": 16.4,
+  "total_elements": 79,
+  "summary": {
+    "total": 1,
+    "collision": 0,
+    "clipping": 1,
+    "contrast": 0
+  },
+  "issues": [
+    {
+      "id": "clipping-000",
+      "type": "clipping",
+      "severity": "medium",
+      "confidence": 0.633,
+      "confidence_level": "medium",
+      "scroll_position": 0.0,
+      "screenshot": "/efs/org_user_01K0S0ANZE11GXG9MD79J8MFBM/apps/app_04a16de4-0fad-495e-9325-92907de26444/iterations/iter1/docs/qa/screenshots/clipping-000_crop.png",
+      "reasoning": "<text> ('FRESH \u2022 ORGANIC \u2022 DELIVERED \u2022') is clipped by <svg> (main > section:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > svg) by 5px horizontally and 13px vertically.",
+      "ai_verdict": "confirmed",
+      "ai_reasoning": "Circular text element visibly protrudes beyond container boundary both horizontally and vertically",
+      "code_references": [
+        {
+          "file": "data/content.ts",
+          "line": 23,
+          "snippet": "  badgeText: 'FRESH \u2022 ORGANIC \u2022 DELIVERED \u2022 '",
+          "context": [
+            "  cta: 'Explore Our Menu',",
+            "  image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-hero-main.png',",
+            "  badgeText: 'FRESH \u2022 ORGANIC \u2022 DELIVERED \u2022 '",
+            "};",
+            ""
+          ],
+          "reason": "clipped element text"
+        },
+        {
+          "file": "app/about/page.tsx",
+          "line": 29,
+          "snippet": "        <div className=\"w-full aspect-[21/9] relative rounded-3xl overflow-hidden\">",
+          "context": [
+            "          Nourishment rooted in nature, crafted for modern life.",
+            "        </h1>",
+            "        <div className=\"w-full aspect-[21/9] relative rounded-3xl overflow-hidden\">",
+            "          <Image ",
+            "            src=\"https://static.kite.ai/image/upload/f_auto,q_auto,w_2100/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-feature-availability.png\" "
+          ],
+          "reason": "overflow CSS"
+        },
+        {
+          "file": "components/CategoryLinks.tsx",
+          "line": 7,
+          "snippet": "    <div className=\"flex flex-nowrap overflow-x-auto md:flex-wrap justify-start md:justify-center gap-8 md:gap-16 pb-8 md:pb-0 hide-scrollbar\" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>",
+          "context": [
+            "export function CategoryLinks() {",
+            "  return (",
+            "    <div className=\"flex flex-nowrap overflow-x-auto md:flex-wrap justify-start md:justify-center gap-8 md:gap-16 pb-8 md:pb-0 hide-scrollbar\" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>",
+            "      {categories.map(c => (",
+            "        <div key={c.name} className=\"flex flex-col items-center flex-shrink-0 cursor-pointer group\">"
+          ],
+          "reason": "overflow CSS"
+        },
+        {
+          "file": "components/CategoryLinks.tsx",
+          "line": 10,
+          "snippet": "          <div className=\"w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden mb-6 relative bg-[#F9F7F2]\">",
+          "context": [
+            "      {categories.map(c => (",
+            "        <div key={c.name} className=\"flex flex-col items-center flex-shrink-0 cursor-pointer group\">",
+            "          <div className=\"w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden mb-6 relative bg-[#F9F7F2]\">",
+            "            <Image ",
+            "              src={c.image} "
+          ],
+          "reason": "overflow CSS"
+        },
+        {
+          "file": "components/FeatureSplit.tsx",
+          "line": 10,
+          "snippet": "      <div className=\"md:w-1/2 relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden\">",
+          "context": [
+            "  return (",
+            "    <section className=\"max-w-7xl mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center gap-16 md:gap-24\">",
+            "      <div className=\"md:w-1/2 relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden\">",
+            "        <Image src={featureSplit.image} alt=\"Feature\" fill className=\"object-cover\" />",
+            "        "
+          ],
+          "reason": "overflow CSS"
+        }
+      ]
+    }
+  ]
+}

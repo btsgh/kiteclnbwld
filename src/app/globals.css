@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+/* Hide Next.js dev/build indicators and error overlays. `devIndicators: false`
+ * in next.config.js disables the build-activity badge, but the dev-tools
+ * button and error toasts still render into <nextjs-portal> in dev. End
+ * users viewing the live sandbox should not see these. The element does not
+ * exist in production builds, so this rule is a harmless no-op there. */
+nextjs-portal {
+  display: none !important;
+}
