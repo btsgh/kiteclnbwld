@@ -28,8 +28,8 @@ export const categories = [
   { name: 'Athletic Performance', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-athlete.png' },
   { name: 'Injury Recovery', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-recovery.png' },
   { name: 'Postpartum Care', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-postpartum.png' },
-  { name: 'Gut Health & Digestion', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter2/iter2-customer-health.png' },
-  { name: 'Weight Management', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter2/iter2-customer-athlete.png' },
+  { name: 'Gut Health & Digestion', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/gut-health-food-r1.png' },
+  { name: 'Weight Management', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/weight-management-food-r2.png' },
   { name: 'Mindful Eating', image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter2/iter2-delivery-lifestyle.png' }
 ];
 
