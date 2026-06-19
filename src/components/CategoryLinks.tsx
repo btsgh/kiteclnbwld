@@ -7,7 +7,7 @@ export function CategoryLinks() {
     <div className="flex flex-nowrap overflow-x-auto md:flex-wrap justify-start md:justify-center gap-8 md:gap-16 pb-8 md:pb-0 hide-scrollbar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
       {categories.map(c => (
         <div key={c.name} className="flex flex-col items-center flex-shrink-0 cursor-pointer group">
-          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden mb-6 relative bg-[#F9F7F2]">
+          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden mb-6 relative bg-[#F5E0D8]">
             <Image 
               src={c.image} 
               alt={c.name} 

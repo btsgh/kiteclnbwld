@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from "node:fs";
 
 // Per-app redirects.csv is the platform's "bulk redirects" channel. The
 // template ships a header-only file by default; only point Vercel at it once
@@ -6,11 +6,11 @@ import { existsSync, readFileSync } from 'node:fs';
 // itself at build time.
 // Vercel runs vercel.ts with cwd at the project root (where this file lives).
 function hasRedirectRows(): boolean {
-  if (!existsSync('redirects.csv')) return false;
-  const dataRows = readFileSync('redirects.csv', 'utf8')
-    .split('\n')
+  if (!existsSync("redirects.csv")) return false;
+  const dataRows = readFileSync("redirects.csv", "utf8")
+    .split("\n")
     .slice(1)
-    .filter((line) => line.trim().length > 0);
+    .filter(line => line.trim().length > 0);
   return dataRows.length > 0;
 }
 
@@ -18,12 +18,12 @@ function hasRedirectRows(): boolean {
 // of framework.
 const SECURITY_HEADERS = [
   {
-    source: '/(.*)',
+    source: "/(.*)",
     headers: [
-      { key: 'X-Content-Type-Options', value: 'nosniff' },
-      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { key: "X-Content-Type-Options", value: "nosniff" },
+      { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
       {
-        key: 'Content-Security-Policy',
+        key: "Content-Security-Policy",
         value:
           "default-src * 'self' data: blob: 'unsafe-inline' 'unsafe-eval'; frame-ancestors *",
       },
@@ -32,44 +32,45 @@ const SECURITY_HEADERS = [
 ];
 
 const REDIRECTS_CONFIG = hasRedirectRows()
-  ? { bulkRedirectsPath: 'redirects.csv' }
+  ? { bulkRedirectsPath: "redirects.csv" }
   : {};
 
-// Layout detection: new apps generated from the Next.js template always ship
-// `next.config.js` at the project root. Legacy apps generated from the older
-// Vite + Fastify template don't — they have a `frontend/` + `backend/` split
-// and own a frozen `package.json` from when they were created. Each layout
-// needs different Vercel project settings, so this single file branches on the
-// marker file. Existing apps keep redeploying without intervention.
-const isNextjs = existsSync('next.config.js');
+// Only the Kite-generated app (a Vite SPA + Fastify API at `api/index.ts`) needs
+// the explicit Functions/rewrites/output config below, so key on that entrypoint.
+// Everything else is Next.js — imports are gated to Next.js and Kite's own
+// non-Fastify apps are Next.js (including the Payload template, which ships
+// `next.config.mjs` and no Fastify entrypoint) — so set its framework
+// explicitly. (Omitting `framework` is not enough: the per-app Vercel project
+// keeps its earlier preset, so Vercel skips the Next.js build and the deploy 404s.)
+const hasFastifyApi = existsSync("api/index.ts");
 
 // Plain object export — no `@vercel/config` import. Each deployed app has a
 // frozen package.json from when it was generated; importing `@vercel/config`
 // here would force every existing app to add the package as a dep before its
 // next deploy. The Vercel docs explicitly support a bare typed export.
-export const config = isNextjs
+export const config = hasFastifyApi
   ? {
-      // Let Vercel use its built-in Next.js handling — it picks the right
-      // build command, install command, and output directory based on the
-      // detected lockfile and the `next` dep in package.json.
-      framework: 'nextjs',
-      ...REDIRECTS_CONFIG,
-      headers: SECURITY_HEADERS,
-    }
-  : {
       framework: null,
       cleanUrls: true,
-      outputDirectory: 'frontend/dist/client',
+      outputDirectory: "frontend/dist/client",
       ...REDIRECTS_CONFIG,
       headers: SECURITY_HEADERS,
       rewrites: [
-        { source: '/api/(.*)', destination: '/api' },
-        { source: '/(.*)', destination: '/api' },
+        { source: "/api/(.*)", destination: "/api" },
+        { source: "/(.*)", destination: "/api" },
       ],
       functions: {
-        'api/index.ts': {
+        "api/index.ts": {
           includeFiles:
-            '{shared/openapi_spec.yaml,node_modules/.pnpm/@seriousme+openapi-schema-validator@*/node_modules/@seriousme/openapi-schema-validator/schemas/**/*.json,frontend/dist/client/**}',
+            "{shared/openapi_spec.yaml,node_modules/.pnpm/@seriousme+openapi-schema-validator@*/node_modules/@seriousme/openapi-schema-validator/schemas/**/*.json,frontend/dist/client/**}",
         },
       },
+    }
+  : {
+      // Next.js (imported repo or a Kite-generated Next.js app). Set the
+      // framework explicitly so Vercel runs its Next.js build/output regardless
+      // of the project's stored preset; add only headers and redirects on top.
+      framework: "nextjs",
+      ...REDIRECTS_CONFIG,
+      headers: SECURITY_HEADERS,
     };
