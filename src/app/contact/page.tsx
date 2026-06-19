@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="bg-white min-h-screen pt-20">
+    <main className="bg-[#F9E0D5] min-h-screen pt-20">
       <section className="max-w-4xl mx-auto px-6 py-24 md:py-32">
         <div className="text-center mb-16">
           <span className={`${bodyFont.className} uppercase tracking-[0.2em] text-xs font-semibold mb-6 text-[#1A1A1A] block`}>
@@ -31,7 +31,7 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Location Info */}
-          <div className="flex flex-col items-start bg-[#F9F7F2] p-10 rounded-3xl">
+          <div className="flex flex-col items-start bg-[#EDCABF] p-10 rounded-3xl">
             <h3 className={`${bodyFont.className} text-xl font-semibold text-[#1A1A1A] mb-6`}>Our Kitchen</h3>
             <p className={`${bodyFont.className} text-[#1A1A1A]/70 leading-relaxed mb-8`}>
               1200 Wellness Avenue<br />

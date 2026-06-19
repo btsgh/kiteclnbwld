@@ -21,7 +21,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-[60] transition-colors duration-300 ${isScrolled || mobileMenuOpen ? 'bg-white shadow-sm' : 'bg-white/90 backdrop-blur-sm'}`}>
+      <header className={`fixed top-0 left-0 right-0 z-[60] transition-colors duration-300 ${isScrolled || mobileMenuOpen ? 'bg-[#F9E0D5] shadow-sm' : 'bg-[#F9E0D5]/90 backdrop-blur-sm'}`}>
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex-shrink-0 relative h-8 w-40" onClick={() => setMobileMenuOpen(false)}>
             <Image src="https://static.kite.ai/image/upload/e_trim/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-logo.png" alt={brand.name} fill className="object-contain object-left" />
@@ -52,7 +52,7 @@ export function Navbar() {
       {/* Mobile Menu Drawer */}
       <div className={`fixed inset-0 z-50 transition-opacity duration-300 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)}></div>
-        <div className={`absolute top-0 right-0 w-4/5 max-w-sm bg-white h-full shadow-xl transition-transform duration-300 flex flex-col pt-24 px-6 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className={`absolute top-0 right-0 w-4/5 max-w-sm bg-[#F9E0D5] h-full shadow-xl transition-transform duration-300 flex flex-col pt-24 px-6 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <nav className="flex flex-col gap-6">
             {navLinks.map(link => (
               <Link key={link.label} href={link.href} onClick={() => setMobileMenuOpen(false)} className={`${bodyFont.className} text-lg uppercase tracking-widest text-[#1A1A1A] font-medium`}>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="bg-white min-h-screen pt-20">
+    <main className="bg-[#F9E0D5] min-h-screen pt-20">
       {/* About Hero */}
       <section className="max-w-7xl mx-auto px-6 py-24 text-center">
         <span className={`${bodyFont.className} uppercase tracking-[0.2em] text-xs font-semibold mb-6 text-[#1A1A1A] block`}>

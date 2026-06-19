@@ -7,7 +7,7 @@ export function ProductGrid() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {products.map(p => (
         <div key={p.id} className="group cursor-pointer">
-          <div className="w-full aspect-[3/4] bg-[#F9F7F2] rounded-3xl overflow-hidden mb-6 relative">
+          <div className="w-full aspect-[3/4] bg-[#EDCABF] rounded-3xl overflow-hidden mb-6 relative">
             <Image 
               src={p.image} 
               alt={p.title} 

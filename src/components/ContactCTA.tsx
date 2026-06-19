@@ -3,7 +3,7 @@ import { heroFont, bodyFont } from '@/app/fonts';
 
 export function ContactCTA() {
   return (
-    <section className="py-24 md:py-32 bg-[#F9F7F2] text-center px-6">
+    <section className="py-24 md:py-32 bg-[#EDCABF] text-center px-6">
       <div className="max-w-3xl mx-auto">
         <span className={`${bodyFont.className} uppercase tracking-[0.2em] text-xs font-semibold mb-6 text-[#1A1A1A] block`}>
           GET IN TOUCH
