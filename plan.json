@@ -1,0 +1,187 @@
+{
+  "files": [
+    {
+      "path": "src/app/page.tsx",
+      "purpose": "home route; renders Hero, CategoryLinks, ProductGrid, ValueProps, FeatureSplit, TrustSection, ContactCTA",
+      "images": []
+    },
+    {
+      "path": "src/app/about/page.tsx",
+      "purpose": "about route; renders AboutHero, StatsBlock, StoryContent, ContactCTA",
+      "images": []
+    },
+    {
+      "path": "src/app/menu/page.tsx",
+      "purpose": "menu route; renders MenuHero, ProductGrid, ContactCTA",
+      "images": []
+    },
+    {
+      "path": "src/app/contact/page.tsx",
+      "purpose": "contact route; renders ContactForm, LocationInfo",
+      "images": []
+    },
+    {
+      "path": "src/app/sitemap.ts",
+      "purpose": "generates sitemap for all routes",
+      "images": []
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "purpose": "sticky top navigation with brand logo, links, and mobile menu",
+      "images": [
+        "iter1-logo"
+      ]
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "purpose": "global footer with brand logo, links, and newsletter signup",
+      "images": [
+        "iter1-logo"
+      ]
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "purpose": "hero section with brand headline, subtitle, primary CTA, and asymmetrical image mask",
+      "images": []
+    },
+    {
+      "path": "src/components/CategoryLinks.tsx",
+      "purpose": "horizontal row of circular category links for target audiences",
+      "images": []
+    },
+    {
+      "path": "src/components/ProductGrid.tsx",
+      "purpose": "grid of best-selling vegetarian bowls with warm cream backgrounds",
+      "images": []
+    },
+    {
+      "path": "src/components/ValueProps.tsx",
+      "purpose": "grid of key benefits with thin-stroke icons and 1px borders",
+      "images": []
+    },
+    {
+      "path": "src/components/FeatureSplit.tsx",
+      "purpose": "alternating flex block for delivery, outlets, and pop-ups info",
+      "images": []
+    },
+    {
+      "path": "src/components/TrustSection.tsx",
+      "purpose": "testimonials and social proof grid",
+      "images": []
+    },
+    {
+      "path": "src/components/ContactCTA.tsx",
+      "purpose": "inquiry and contact call-to-action section",
+      "images": []
+    },
+    {
+      "path": "src/data/content.ts",
+      "purpose": "exports all copy, product data, testimonials, and navigation links",
+      "images": [
+        "iter1-hero-main",
+        "iter1-audience-athlete",
+        "iter1-audience-recovery",
+        "iter1-audience-postpartum",
+        "iter1-audience-wellness",
+        "iter1-product-bowl-1",
+        "iter1-product-bowl-2",
+        "iter1-product-bowl-3",
+        "iter1-product-bowl-4",
+        "iter1-feature-availability",
+        "iter1-portrait-customer"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "slug": "iter1-logo",
+      "prompt": "CleanBowled wordmark logo, elegant modern serif typography, charcoal text, minimalist, premium wellness brand. Background is solid #FFFFFF. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners.",
+      "aspect_ratio": "21:9",
+      "is_logo": true,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-logo.png"
+    },
+    {
+      "slug": "iter1-hero-main",
+      "prompt": "Eye-level 3/4 close-up of a beautifully prepared vegetarian nourishment bowl in a matte ceramic dish, resting on a reclaimed wood surface with a linen napkin. Soft diffused morning sunlight, airy and bright. Background is an uncluttered warm cream #F9F7F2 environment. Premium editorial lifestyle photography, nourishing minimalism, clean eating. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "3:4",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-hero-main.png"
+    },
+    {
+      "slug": "iter1-audience-athlete",
+      "prompt": "Top-down flatlay of high-protein macro-ingredients like lentils, almonds, and quinoa arranged neatly on a pristine white surface. Bright airy lighting, soft shadows. Premium editorial photography, nourishing minimalism. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "1:1",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-athlete.png"
+    },
+    {
+      "slug": "iter1-audience-recovery",
+      "prompt": "Eye-level close-up of a warming, soft-textured vegetarian soup in an earthy ceramic bowl, resting on a sun-drenched domestic kitchen counter. Cozy, bright natural light. Premium editorial lifestyle photography, nourishing minimalism. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "1:1",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-recovery.png"
+    },
+    {
+      "slug": "iter1-audience-postpartum",
+      "prompt": "Candid mid-action shot of a woman's hands gently preparing a fresh green salad with avocado and seeds in a bright, airy kitchen. Soft focus background, warm morning light. Premium editorial lifestyle photography, nourishing minimalism. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "1:1",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-postpartum.png"
+    },
+    {
+      "slug": "iter1-audience-wellness",
+      "prompt": "Top-down flatlay of vibrant, dew-touched fresh greens, cucumber ribbons, and edamame on a clean white marble surface. Crisp, bright natural light. Premium editorial photography, nourishing minimalism. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "1:1",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-audience-wellness.png"
+    },
+    {
+      "slug": "iter1-product-bowl-1",
+      "prompt": "Product shot of a vibrant vegetarian Buddha bowl featuring roasted sweet potatoes, chickpeas, and fresh greens in a matte ceramic bowl. Placed on a solid warm cream #F9F7F2 background. Soft studio lighting, premium editorial food photography. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "3:4",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-1.png"
+    },
+    {
+      "slug": "iter1-product-bowl-2",
+      "prompt": "Product shot of a high-protein vegetarian bowl featuring quinoa, grilled tofu, and edamame in a matte ceramic bowl. Placed on a solid warm cream #F9F7F2 background. Soft studio lighting, premium editorial food photography. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "3:4",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-2.png"
+    },
+    {
+      "slug": "iter1-product-bowl-3",
+      "prompt": "Product shot of a healing vegetarian porridge bowl topped with fresh berries and chia seeds in a matte ceramic bowl. Placed on a solid warm cream #F9F7F2 background. Soft studio lighting, premium editorial food photography. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "3:4",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-3.png"
+    },
+    {
+      "slug": "iter1-product-bowl-4",
+      "prompt": "Product shot of a vibrant green detox bowl featuring kale, avocado, and pumpkin seeds in a matte ceramic bowl. Placed on a solid warm cream #F9F7F2 background. Soft studio lighting, premium editorial food photography. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "3:4",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-product-bowl-4.png"
+    },
+    {
+      "slug": "iter1-feature-availability",
+      "prompt": "Wide straight-on shot of a clean, minimalist wooden pop-up stall displaying organic vegetarian food packaging in a bright, airy retail space. People interacting in the soft-focus background. Warm natural light, premium editorial lifestyle photography. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "4:3",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-feature-availability.png"
+    },
+    {
+      "slug": "iter1-portrait-customer",
+      "prompt": "Sarah Jenkins, a woman in her 30s, smiling naturally while holding a ceramic bowl of fresh salad in a sunlit, airy kitchen. Soft diffused morning light, candid lifestyle portrait. Premium editorial photography, nourishing minimalism. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+      "aspect_ratio": "1:1",
+      "is_logo": false,
+      "url": "https://static.kite.ai/image/upload/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-portrait-customer.png"
+    }
+  ],
+  "fonts": {
+    "hero": "DM Serif Display",
+    "heading": "DM Serif Display",
+    "sub_heading": "Inter",
+    "body": "Inter"
+  }
+}
