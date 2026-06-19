@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-[#FDF0EB] min-h-screen">
+    <main className="bg-[#F9E0D5] min-h-screen">
       <Hero />
       <section className="py-24 md:py-32 max-w-7xl mx-auto px-6">
         <CategoryLinks />
