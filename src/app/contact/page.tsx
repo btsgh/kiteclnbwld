@@ -39,7 +39,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Location Info */}
           <div className="flex flex-col items-start bg-[#EDCABF] p-10 rounded-3xl">
-            <h3 className={`${bodyFont.className} text-xl font-semibold text-[#1A1A1A] mb-6`}>Our Kitchen</h3>
+            <h3 className={`${bodyFont.className} text-xl font-semibold text-[#1A1A1A] mb-6`}>Our Location</h3>
             <p className={`${bodyFont.className} text-[#1A1A1A]/70 leading-relaxed mb-8`}>
               1200 Wellness Avenue<br />
               Suite 100<br />
@@ -51,7 +51,7 @@ export default function ContactPage() {
               Follow us on Instagram to find out where our weekend pop-up shops will be stationed next.
             </p>
 
-            <h3 className={`${bodyFont.className} text-xl font-semibold text-[#1A1A1A] mb-6`}>Hours</h3>
+            <h3 className={`${bodyFont.className} text-xl font-semibold text-[#1A1A1A] mb-6`}>We are open:</h3>
             <p className={`${bodyFont.className} text-[#1A1A1A]/70 leading-relaxed`}>
               Monday - Friday: 8am - 6pm<br />
               Saturday: 9am - 3pm (Pop-ups only)<br />
