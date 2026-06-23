@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Our Story | CleanBowled – Plant-Based Nutrition in LA',
     description: 'CleanBowled began with a mission to make truly nourishing plant-based food accessible. Learn how we source locally, prepare mindfully, and deliver organic bowls across Los Angeles.',
-    images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1600/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-feature-availability.png'],
+    images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1600/app/04a16de4-0fad-495e-9325-92907de26444/iter2/iter2-gallery-wide-1.png'],
   },
   twitter: {
     card: 'summary_large_image',
@@ -32,12 +32,12 @@ export default function AboutPage() {
         <h1 className={`${heroFont.className} text-5xl md:text-7xl leading-tight mb-12 text-[#1A1A1A] max-w-4xl mx-auto`}>
           Nourishment rooted in nature, crafted for modern life.
         </h1>
-        <div className="w-full aspect-[21/9] relative rounded-3xl overflow-hidden">
-          <Image 
-            src="https://static.kite.ai/image/upload/f_auto,q_auto,w_2100/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-feature-availability.png" 
-            alt="CleanBowled Pop-up" 
-            fill 
-            className="object-cover"
+        <div className="w-full aspect-[16/9] relative rounded-3xl overflow-hidden">
+          <Image
+            src="https://static.kite.ai/image/upload/f_auto,q_auto,c_fill,g_auto,w_1600/app/04a16de4-0fad-495e-9325-92907de26444/iter2/iter2-gallery-wide-1.png"
+            alt="Freshly prepared vegetarian bowls made with organic, locally sourced ingredients by CleanBowled"
+            fill
+            className="object-cover object-center"
             priority
           />
         </div>
