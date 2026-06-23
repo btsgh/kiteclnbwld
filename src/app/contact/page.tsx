@@ -29,7 +29,7 @@ export default function ContactPage() {
             CONTACT US
           </span>
           <h1 className={`${heroFont.className} text-5xl md:text-7xl leading-tight mb-8 text-[#1A1A1A]`}>
-            We'd love to hear from you.
+            We'd love to hear from you!
           </h1>
           <p className={`${bodyFont.className} text-lg text-[#1A1A1A]/80`}>
             Reach out for delivery support, retail partnerships, or any questions about our ingredients.
