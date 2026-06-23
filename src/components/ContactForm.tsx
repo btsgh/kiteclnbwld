@@ -48,7 +48,7 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label htmlFor="email" className={`${bodyFont.className} block text-sm font-semibold text-[#1A1A1A] mb-2`}>Email</label>
+        <label htmlFor="email" className={`${bodyFont.className} block text-sm font-semibold text-[#1A1A1A] mb-2`}>Email id</label>
         <input
           type="email"
           id="email"
