@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { heroFont, bodyFont } from '@/app/fonts';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact | CleanBowled',
@@ -38,7 +39,7 @@ export default function ContactPage() {
               Suite 100<br />
               Los Angeles, CA 90015
             </p>
-            
+
             <h3 className={`${bodyFont.className} text-xl font-semibold text-[#1A1A1A] mb-6`}>Pop-up Locations</h3>
             <p className={`${bodyFont.className} text-[#1A1A1A]/70 leading-relaxed mb-8`}>
               Follow us on Instagram to find out where our weekend pop-up shops will be stationed next.
@@ -53,63 +54,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div>
-            <form id="contact-form" className="flex flex-col gap-6">
-              <div>
-                <label htmlFor="name" className={`${bodyFont.className} block text-sm font-semibold text-[#1A1A1A] mb-2`}>Name</label>
-                <input type="text" id="name" name="name" required className={`${bodyFont.className} w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#1A1A1A] bg-transparent text-[#1A1A1A]`} />
-              </div>
-              <div>
-                <label htmlFor="email" className={`${bodyFont.className} block text-sm font-semibold text-[#1A1A1A] mb-2`}>Email</label>
-                <input type="email" id="email" name="email" required className={`${bodyFont.className} w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#1A1A1A] bg-transparent text-[#1A1A1A]`} />
-              </div>
-              <div>
-                <label htmlFor="subject" className={`${bodyFont.className} block text-sm font-semibold text-[#1A1A1A] mb-2`}>Subject</label>
-                <input type="text" id="subject" name="subject" required className={`${bodyFont.className} w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#1A1A1A] bg-transparent text-[#1A1A1A]`} />
-              </div>
-              <div>
-                <label htmlFor="message" className={`${bodyFont.className} block text-sm font-semibold text-[#1A1A1A] mb-2`}>Message</label>
-                <textarea id="message" name="message" rows={5} required className={`${bodyFont.className} w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#1A1A1A] bg-transparent text-[#1A1A1A] resize-none`}></textarea>
-              </div>
-              <button type="submit" id="submit-btn" className={`${bodyFont.className} rounded-full bg-[#1A1A1A] text-white px-8 py-4 uppercase tracking-wider text-sm hover:bg-[#1A1A1A]/90 transition-colors w-full mt-2`}>
-                Send Message
-              </button>
-              <p id="form-status" className={`${bodyFont.className} text-sm text-green-600 hidden mt-2 text-center`}>Message sent successfully!</p>
-            </form>
-            <script dangerouslySetInnerHTML={{ __html: `
-              document.getElementById('contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                var btn = document.getElementById('submit-btn');
-                var status = document.getElementById('form-status');
-                var originalText = btn.innerText;
-                btn.innerText = 'Sending...';
-                btn.disabled = true;
-                
-                var fd = new FormData(this);
-                fetch('/api/v1/kite-platform/contact-form/submit', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({
-                    email: fd.get('email'),
-                    subject: fd.get('subject'),
-                    json_body: Object.fromEntries(fd)
-                  })
-                }).then(function(res) {
-                  if(res.ok) {
-                    status.classList.remove('hidden');
-                    document.getElementById('contact-form').reset();
-                  } else {
-                    alert('There was an error sending your message.');
-                  }
-                }).catch(function() {
-                  alert('There was an error sending your message.');
-                }).finally(function() {
-                  btn.innerText = originalText;
-                  btn.disabled = false;
-                });
-              });
-            `}} />
-          </div>
+          <ContactForm />
         </div>
       </section>
     </main>
