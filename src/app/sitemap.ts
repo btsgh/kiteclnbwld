@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cleanbowled.com';
+  const baseUrl = 'https://cleanbowled.vercel.app';
 
   return [
     {

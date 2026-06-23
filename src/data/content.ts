@@ -3,12 +3,13 @@ export const brand = {
   description: 'Healthy vegetarian food options for everyday wellness, recovery, and peak performance.',
   email: 'hello@cleanbowled.com',
   social: {
-    instagram: '#',
-    facebook: '#'
+    instagram: '',
+    facebook: ''
   }
 };
 
 export const navLinks = [
+  { label: 'Home', href: '/' },
   { label: 'Menu', href: '/menu' },
   { label: 'Our Story', href: '/about' },
   { label: 'Contact', href: '/contact' }

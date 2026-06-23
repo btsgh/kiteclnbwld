@@ -58,7 +58,7 @@ export function Hero() {
         <div className="relative w-full h-full z-10" style={{ clipPath: 'url(#hero-mask)' }}>
           <Image 
             src={heroContent.image} 
-            alt="Hero" 
+            alt="Fresh organic vegetarian bowl by CleanBowled — clean eating delivered in Los Angeles" 
             fill 
             className="object-cover"
             priority

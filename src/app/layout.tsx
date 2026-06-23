@@ -3,6 +3,8 @@ import Script from 'next/script';
 import { SCRIPT_INJECTOR_CDN_URL } from '@appsmithorg/template-frontend';
 import DevErrorOverlay from '@/components/dev-error-overlay';
 import { getBaseUrl } from '@/lib/site-url';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
 import './globals.css';
 
 // metadataBase resolves the relative `alternates.canonical` and
@@ -11,9 +13,13 @@ import './globals.css';
 // domain frozen at generation time.
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
-  title: 'Prototype',
-  description: '',
-  twitter: { card: 'summary_large_image' },
+  title: 'CleanBowled | Vegetarian Nutrition Delivered in LA',
+  description: 'CleanBowled crafts organic, plant-based bowls for everyday wellness, athletic recovery, and postpartum care — delivered fresh to your door in Los Angeles.',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CleanBowled | Vegetarian Nutrition Delivered in LA',
+    description: 'CleanBowled crafts organic, plant-based bowls for everyday wellness, athletic recovery, and postpartum care — delivered fresh to your door in Los Angeles.',
+  },
 };
 
 export default function RootLayout({
@@ -49,7 +55,9 @@ export default function RootLayout({
       </head>
       <body>
         {process.env.NODE_ENV !== 'production' && <DevErrorOverlay />}
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

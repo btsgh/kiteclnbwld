@@ -38,11 +38,13 @@ export function Footer() {
                   {brand.email}
                 </a>
               </li>
-              <li>
-                <a href={brand.social.instagram} className={`${bodyFont.className} text-[#1A1A1A]/70 hover:text-[#1A1A1A] transition-colors`}>
-                  Instagram
-                </a>
-              </li>
+              {brand.social.instagram && (
+                <li>
+                  <a href={brand.social.instagram} className={`${bodyFont.className} text-[#1A1A1A]/70 hover:text-[#1A1A1A] transition-colors`}>
+                    Instagram
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>

@@ -3,20 +3,26 @@ import { heroFont, bodyFont } from '@/app/fonts';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact | CleanBowled',
-  description: 'Get in touch with us for delivery inquiries, pop-up partnerships, or nutritional questions.',
+  title: 'Contact CleanBowled | Delivery & Partnerships in LA',
+  description: 'Reach out to CleanBowled for delivery support, retail partnerships, or ingredient questions. Visit our kitchen at 1200 Wellness Avenue, Los Angeles, or email hello@cleanbowled.com.',
   alternates: { canonical: '/contact' },
   openGraph: {
     url: '/contact',
-    title: 'Contact | CleanBowled',
-    description: 'Get in touch with us for delivery inquiries, pop-up partnerships, or nutritional questions.',
-    images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-hero-main.png']
-  }
+    type: 'website',
+    title: 'Contact CleanBowled | Delivery & Partnerships in LA',
+    description: 'Reach out to CleanBowled for delivery support, retail partnerships, or ingredient questions. Visit our kitchen at 1200 Wellness Avenue, Los Angeles, or email hello@cleanbowled.com.',
+    images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-hero-main.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact CleanBowled | Delivery & Partnerships in LA',
+    description: 'Get in touch for delivery inquiries, pop-up partnerships, or nutritional questions. We\'d love to hear from you.',
+  },
 };
 
 export default function ContactPage() {
   return (
-    <main className="bg-[#F9E0D5] min-h-screen pt-20">
+    <main className="bg-[#F9E0D5] min-h-screen">
       <section className="max-w-4xl mx-auto px-6 py-24 md:py-32">
         <div className="text-center mb-16">
           <span className={`${bodyFont.className} uppercase tracking-[0.2em] text-xs font-semibold mb-6 text-[#1A1A1A] block`}>

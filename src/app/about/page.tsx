@@ -4,20 +4,26 @@ import { heroFont, bodyFont } from '@/app/fonts';
 import { ContactCTA } from '@/components/ContactCTA';
 
 export const metadata: Metadata = {
-  title: 'Our Story | CleanBowled',
-  description: 'Learn about the origins of CleanBowled and our mission to provide elevated vegetarian nutrition.',
+  title: 'Our Story | CleanBowled – Plant-Based Nutrition in LA',
+  description: 'CleanBowled began with a mission to make truly nourishing plant-based food accessible. Learn how we source locally, prepare mindfully, and deliver organic bowls across Los Angeles.',
   alternates: { canonical: '/about' },
   openGraph: {
     url: '/about',
-    title: 'Our Story | CleanBowled',
-    description: 'Learn about the origins of CleanBowled and our mission to provide elevated vegetarian nutrition.',
-    images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1600/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-feature-availability.png']
-  }
+    type: 'website',
+    title: 'Our Story | CleanBowled – Plant-Based Nutrition in LA',
+    description: 'CleanBowled began with a mission to make truly nourishing plant-based food accessible. Learn how we source locally, prepare mindfully, and deliver organic bowls across Los Angeles.',
+    images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1600/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-feature-availability.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Story | CleanBowled – Plant-Based Nutrition in LA',
+    description: 'Learn how CleanBowled was founded to bring organic, plant-based bowls for wellness, recovery, and performance to Los Angeles.',
+  },
 };
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#F9E0D5] min-h-screen pt-20">
+    <main className="bg-[#F9E0D5] min-h-screen">
       {/* About Hero */}
       <section className="max-w-7xl mx-auto px-6 py-24 text-center">
         <span className={`${bodyFont.className} uppercase tracking-[0.2em] text-xs font-semibold mb-6 text-[#1A1A1A] block`}>

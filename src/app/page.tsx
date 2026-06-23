@@ -9,20 +9,82 @@ import { ContactCTA } from '@/components/ContactCTA';
 import { heroFont, bodyFont } from '@/app/fonts';
 
 export const metadata: Metadata = {
-  title: 'CleanBowled | Elevated Vegetarian Nutrition',
-  description: 'Thoughtfully crafted vegetarian nutrition for everyday wellness, athletic performance, and mindful recovery.',
+  title: 'CleanBowled | Elevated Vegetarian Nutrition Delivered',
+  description: 'CleanBowled delivers thoughtfully crafted vegetarian bowls for everyday wellness, athletic recovery, and postpartum care — fresh, organic, and delivered to your door in Los Angeles.',
   alternates: { canonical: '/' },
   openGraph: {
     url: '/',
-    title: 'CleanBowled | Elevated Vegetarian Nutrition',
-    description: 'Thoughtfully crafted vegetarian nutrition for everyday wellness, athletic performance, and mindful recovery.',
-    images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-hero-main.png']
-  }
+    type: 'website',
+    title: 'CleanBowled | Elevated Vegetarian Nutrition Delivered',
+    description: 'CleanBowled delivers thoughtfully crafted vegetarian bowls for everyday wellness, athletic recovery, and postpartum care — fresh, organic, and delivered to your door in Los Angeles.',
+    images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-hero-main.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CleanBowled | Elevated Vegetarian Nutrition Delivered',
+    description: 'Plant-based bowls for wellness, athletic performance, and mindful recovery. Fresh, organic, delivered to Los Angeles.',
+  },
+};
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'CleanBowled',
+  description: 'Organic, plant-based bowls for everyday wellness, athletic recovery, and postpartum care — delivered fresh in Los Angeles.',
+  url: 'https://cleanbowled.vercel.app',
+  email: 'hello@cleanbowled.com',
+  servesCuisine: 'Vegetarian',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '1200 Wellness Avenue, Suite 100',
+    addressLocality: 'Los Angeles',
+    addressRegion: 'CA',
+    postalCode: '90015',
+    addressCountry: 'US',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '18:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '09:00',
+      closes: '15:00',
+    },
+  ],
+};
+
+const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'CleanBowled',
+  url: 'https://cleanbowled.vercel.app',
+  description: 'Organic, plant-based bowls for everyday wellness, athletic recovery, and postpartum care — delivered fresh in Los Angeles.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://cleanbowled.vercel.app/menu?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
 };
 
 export default function Home() {
   return (
     <main className="bg-[#F9E0D5] min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
       <Hero />
       <section className="py-16 md:py-20 max-w-7xl mx-auto px-6">
         <CategoryLinks />
