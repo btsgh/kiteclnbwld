@@ -16,7 +16,7 @@ export const navLinks = [
 
 export const heroContent = {
   kicker: 'NOURISH YOUR BODY',
-  headline: 'Cleanxyz Eating, Elevated.',
+  headline: 'Clean Eating, Elevated.',
   description: 'Thoughtfully crafted vegetarian nutrition for everyday wellness, athletic performance, and mindful recovery.',
   cta: 'Explore Our Menu',
   image: 'https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/04a16de4-0fad-495e-9325-92907de26444/iter1/iter1-hero-main.png',
