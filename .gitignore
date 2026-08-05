@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+data-alloy/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.git_init.lock
+
+# Build artifacts
+dist/
+build/
+out/
+
+# Testing artifacts
+**/frontend/test-results/**
+
+# Kite draft worktrees — nested linked worktrees under the org tree.
+# Excluded so a future unscoped `git add`/`git status .` at the org root
+# never walks or stages another draft's checkout (footgun-prevention; see
+# draft latency plan Increment 0).
+.worktrees/
+
+# OpenCode/agent harness config. ``.opencode/agents/coding.md`` embeds the
+# coding agent's system prompt; it is written into the sandbox at runtime and
+# left in place between runs (overwritten each run). Ignored here so an
+# unscoped, whole-tree stage on the sandbox can never commit it — the system
+# prompt stays out of git history (EXCLUDE_PATTERNS already keeps it out of
+# EFS sync).
+.opencode/
+
+# OpenCode host-side prompt provenance is internal diagnostic metadata, never
+# user-authored website content.
+docs/main/prompts-used/opencode-cli-user.md
