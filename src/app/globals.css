@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+/* Hide Next.js dev/build indicators and error overlays. `devIndicators: false`
+ * in next.config.js disables the build-activity badge, but the dev-tools
+ * button and error toasts still render into <nextjs-portal> in dev. End
+ * users viewing the live sandbox should not see these. The element does not
+ * exist in production builds, so this rule is a harmless no-op there. */
+nextjs-portal {
+  display: none !important;
+}
+
+/* Scroll reveal — pairs with src/components/scroll-reveal.tsx (mounted once
+ * in layout.tsx). Elements with `reveal` fade + rise in when they enter the
+ * viewport. The hidden state is gated on `html.js` (set by the layout's
+ * inline head script) so content renders visible when scripting is disabled
+ * or the observer never runs — never hide reveal content in an ungated base
+ * rule. Reduced motion renders everything in place, no animation. */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+html.js .reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Site-wide reduced-motion guard: every animation and transition collapses to
+ * a single frame when the visitor asks for reduced motion. Site code relies
+ * on this guard instead of wrapping each animation individually — keep it. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

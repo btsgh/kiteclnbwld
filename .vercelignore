@@ -1,0 +1,25 @@
+.next/
+node_modules/
+
+# Draft worktrees. A draft checkout lives at `.worktrees/draft_<id>` inside the
+# app tree, so without this the deploy upload walks a full copy of the site per
+# open draft. Two failures follow: the upload blows Vercel's file-count cap on
+# an app with several drafts, and `draft_service` creates and removes these
+# directories while the CLI is enumerating, so a path vanishes mid-walk and the
+# upload dies on ENOENT. Nothing under here ships.
+.worktrees/
+.git/
+
+# Secrets. The secret vault writes runtime env into `.env` in the app tree, so
+# without this the raw file ships with the deploy upload. Safe to exclude: the
+# deployed app does not read it — `vercel_deploy_service._sync_environment_variables`
+# reads the vault and pushes every key to Vercel as a PROJECT env var, which is
+# what the running site actually resolves.
+#
+# Note this does NOT stop a vault secret reaching production: that sync is
+# unconditional. Keeping a write-capable credential (a CMS management token)
+# out of production needs an exclusion in that sync, or storing it outside the
+# vault entirely.
+.env
+.env.*
+!.env.example
